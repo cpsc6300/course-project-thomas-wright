@@ -1,16 +1,20 @@
-# TITLE:
-## Team Members:
-## Date:
+# TITLE:Analysis of CPU performance for various architectures and cores
+## Team Members:Thomas Wright
+## Date: 10/22/2020
 
 # Project Description
 ## Probelm Statement and Motivation
-This should be a brief and self-contained decription of the problem that your project aims to solve and what motivated you to solve this problem.
+This project is aimed to look at how well modern day CPU's are scaling with mutithreadded proceeses with mutliple cores. This can help us see if adding addtional cores to CPU's is giving the end users a tangible benefit. We can break down the differences between CPU's by architecture, generation, manufacturing size and logical cores. All this information will help us see exactly what attributes most greatly help CPU performance in a multithreaded application.
+.
 
 ## Introduction and Description of Data
-Description of relevant knowledge. Why is this problem important? Why is it challenging? Introduce the motivations for the project question and how that question was defined through preliminary EDA.
+Visualizing and relating the data to itself can emphisize trends which could show which CPU design features are more impactful for CPU performance. The issue with this methods is it is hard to isolate cpu features so working with a large dataset of CPU's could help keeping some variables reasonably similar. This data could be used to see what features you are looking for in a CPU or to guage when the best time to purchase a cpu is.
+
 
 # Plan
-This could include the major timeline and milestones of your project as well as requirements of computing and storage resources. 
+The end plan is to be able to automate graphs of performance vs CPU features and have this hosted on a website. Linear regressions of some of the data should also be available. The first step would be to store data MySQL database possibly with a webui like phpmyadmin to look at the database with ease. Then I will set up a web application to be able to look at a simple graph of the data and make sure all compotents of the project interface with eachother. Lastly would be to create the python functions to sanitize and graph the data proparly with user input. The computing and storage requirements should be relativly small considering I am only including modern cpus and there should be very little user trafic. 
+
 
 # References:
-This could include any key papers, texts, or websites that you may use to develop your project.
+For CPU specifications and information the website www.techpowerup.com has a vast database of this information which can be scrapped.
+For CPU performance results www.cpubenchmark.net has CPU's listed with their respective performance metrics in single and multithreaded core tests. While this website uses and arbitrary score for it's test the values should be consistant throughout the website.
