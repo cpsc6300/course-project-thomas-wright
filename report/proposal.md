@@ -12,7 +12,7 @@ Visualizing and relating the data to itself can emphasize trends which could sho
 
 
 # Plan
-The end plan is to be able to automate graphs of performance vs CPU features and have this hosted on a website. Linear regressions of some of the data should also be available. The first step would be to store data in a MySQL database, possibly with a webui like phpmyadmin to look at the database with ease. Then I will set up a web application to be able to look at a simple graph of the data and make sure all components of the project interface with each other. Lastly would be to create the python functions to sanitize and graph the data properly with user input. The computing and storage requirements should be relatively small considering I am only including modern cpus and there should be very little user traffic. 
+The end plan is to be able to automate graphs of performance vs CPU features and have this hosted on a website. Linear regressions of some of the data should also be available. The first step would be to store data in a MySQL database, possibly with a webui like phpmyadmin to look at the database with ease. Then I will set up a web application(flask or django) to be able to look at a simple graph of the data and make sure all components of the project interface with each other. Lastly would be to create the python functions to sanitize and graph the data properly with user input. The computing and storage requirements should be relatively small considering I am only including modern cpus and there should be very little user traffic. 
 
 
 # References:
