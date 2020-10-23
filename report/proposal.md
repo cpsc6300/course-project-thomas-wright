@@ -16,7 +16,7 @@ The end plan is to be able to automate graphs of performance vs CPU features and
 
 
 # References:
-For CPU specifications and information the website www.techpowerup.com has a vast database of this information which can be scrapped.
+For CPU specifications and information the website www.techpowerup.com has a vast database of this information which can be scraped.
 For CPU performance results www.cpubenchmark.net has CPU's listed with their respective performance metrics in single and multithreaded core tests. While this website uses an arbitrary score for it's test the values should be consistent throughout the website.
 
 
