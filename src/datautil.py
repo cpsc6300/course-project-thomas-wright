@@ -54,9 +54,8 @@ def download_data(url, n=50, sleep=1):
 
                     else:
                         temp2 = data[2]
-                        temp1 = data[1]
                         data[1] = data[1][1]
-                        data[2] = temp1[3:]
+                        data[2] = "Threads"
                         data.append(temp2[1:])
 
                     cpus[i][data[2]] = data[3]
