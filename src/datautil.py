@@ -81,7 +81,7 @@ def download_data(url, n=50, sleep=1):
         data[1] = data[1][:5]
         data[1] = data[1].replace(" ", "")
         single_threaded_score = data[1]
-        print(single_threaded_score)
+        print(name)
         
         cpus[i]["mt_score"] = int(multi_threaded_score)
         cpus[i]["st_score"] = int(single_threaded_score)
@@ -92,19 +92,3 @@ def download_data(url, n=50, sleep=1):
         time.sleep(sleep)
     
     return pd.DataFrame.from_dict(cpus)
-
-def save_df(df, filename):
-    basedir = os.path.dirname(os.getcwd())
-    filepath = 'data/' + filename
-    full_path = os.path.join(basedir, filepath)
-    df.to_csv(full_path, index=False)
-
-def load_data(url, file):
-    file = os.path.dirname(os.getcwd()) + '/data/' + file
-    print(file)
-    if not os.path.exists(file):
-        if not os.path.exists(os.path.dirname(file)):
-            os.makedirs(os.path.dirname(file))
-        df = download_data(url)
-        save_df(df, file)
-    return pd.read_csv(file)
