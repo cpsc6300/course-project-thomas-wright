@@ -14,7 +14,7 @@ def get_soup(url):
     return soup
 
 def download_data(url, n=50, sleep=1):
-    cpus = [dict() for x in range(n+1)]
+    cpus = [dict() for x in range(n)]
     soup = get_soup(url)
     table = soup.find('div', class_='chart')
     rows = table.find_all('li')
@@ -71,6 +71,20 @@ def download_data(url, n=50, sleep=1):
 
                 #Assign to dict
                 cpus[i][data[0]] = data[1]
+                
+        #Gathering scores from other part of dataset
+        table = soup.find('div', class_= 'right-desc')
+        body = table.find_all('p')
+        multi_threaded_score = table.find_all('span')[1].get_text()
+        
+        data = table.get_text().split(":")
+        data[1] = data[1][:5]
+        data[1] = data[1].replace(" ", "")
+        single_threaded_score = data[1]
+        print(single_threaded_score)
+        
+        cpus[i]["mt_score"] = int(multi_threaded_score)
+        cpus[i]["st_score"] = int(single_threaded_score)
 
         if i >= n-1:
             break
