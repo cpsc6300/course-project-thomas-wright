@@ -101,7 +101,6 @@ def save_df(df, filename):
 
 def load_data(url, file):
     file = os.path.dirname(os.getcwd()) + '/data/' + file
-    print(file)
     if not os.path.exists(file):
         if not os.path.exists(os.path.dirname(file)):
             os.makedirs(os.path.dirname(file))
