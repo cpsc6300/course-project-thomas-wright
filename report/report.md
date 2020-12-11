@@ -1,7 +1,7 @@
 
 
 # TITLE: Analysis of CPU performance for various architectures and cores
-## Team Members:Thomas Wright
+## Team Members: Thomas Wright
 ## Date: 12/10/20
 
 # Probelm Statement and Motivation
